@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>notes</title>
+    <style>
+        .box {
+            width: 100%;
+            background: deepskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        // typeof 检测基本数据类型
+        console.log(typeof null) //object
+        console.log(typeof undefined) //undefined
+        console.log(typeof true) //boolean
+        console.log(typeof 5) //number
+        console.log(typeof "5") //string
+        console.log(typeof {}) //object
+        console.log(typeof function () { }) //function
+        console.log(typeof []) //object
+
+        // instanceof 检测引用数据类型
+        // console.log(null instanceof Null) //错误
+        // console.log(undefined instanceof Undefined) //错误
+        console.log({} instanceof Object)
+        console.log(function () { } instanceof Function)
+        console.log([] instanceof Array)
+
+        // constructor 构造函数指针
+        // console.log((null).constructor == Null) //错误
+        // console.log((undefined).constructor == Undefined) //错误
+        console.log((true).constructor == Boolean)
+        console.log((5).constructor == Number)
+        console.log(('5').constructor == String)
+        console.log({}.constructor == Object)
+        console.log((function () { }).constructor == Function)
+        console.log([].constructor == Array)
+
+        // jquery方法检测数据类型
+        var str = Object.prototype.toString;
+        var fn = function (v) {
+            var s = str.call(v);
+            var r = new RegExp("\\s(.*?)]");
+            var m = s.match(r) && s.match(r)[1];
+            return m
+        }
+        console.log(fn(null))
+        console.log(fn(undefined))
+        console.log(fn(true))
+        console.log(fn(5))
+        console.log(fn(""))
+        console.log(fn({}))
+        console.log(fn(function () { }))
+        console.log(fn([]))
+    </script>
+    <script>
+        // 正则获取url参数
+        var url = "https://www.zhihu.com/#/?name=张三&age=25&sex=男&id=";
+        function getUrlParams(name) {
+            var r = new RegExp("(^|\/?)" + name + "=([^|&]*)(&|$)");
+            var s = url.match(r);
+            return s ? s[2] : null;
+        }
+        console.log(getUrlParams("name"))
+    </script>
+    <script>
+        // vue实现原理
+
+    </script>
+
+</body>
+
+</html>

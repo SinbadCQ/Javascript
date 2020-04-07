@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>index</title>
+    <style>
+        div {
+            width: 100%;
+            height: 100px;
+        }
+
+        @media only screen and (min-width: 700px) {
+            div {
+                background: deepskyblue;
+            }
+        }
+
+        @media only screen and (min-width: 800px) {
+            div {
+                background: orange;
+            }
+        }
+
+        @media only screen and (min-width: 900px) {
+            div {
+                background: dodgerblue;
+            }
+        }
+    </style>
 </head>
+
 <body>
     测试本地node服务
+    dom树是由dom元素及属性节点组成，加上css解析后的样式对象和解析后的动作组成。
+
+    渲染就是把dom树进行可视化。
+    <!-- <div title="这是一个div"></div>
     <button id="btn">获取数据</button>
     <script src="js/index.js"></script>
+    <script src="js/prototype.js"></script> -->
 </body>
+
 </html>
