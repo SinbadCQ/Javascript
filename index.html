@@ -30,17 +30,17 @@
             }
         }
     </style>
+
 </head>
 
 <body>
-    测试本地node服务
-    dom树是由dom元素及属性节点组成，加上css解析后的样式对象和解析后的动作组成。
+    <h3>获取手机型号</h3>
+    <p id="text">
 
-    渲染就是把dom树进行可视化。
-    <!-- <div title="这是一个div"></div>
-    <button id="btn">获取数据</button>
-    <script src="js/index.js"></script>
-    <script src="js/prototype.js"></script> -->
+    </p>
+    <script>
+        document.getElementById('text').innerHTML = window.navigator.userAgent
+    </script>
 </body>
 
 </html>
